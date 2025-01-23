@@ -1,0 +1,70 @@
+dnl ---------------------------------------------------------
+dnl |                                                       |
+dnl |  configure.in for rain by Evil (mystic@tenebrous.com) |
+dnl |                                                       |
+dnl ---------------------------------------------------------
+
+
+dnl Process this file with autoconf to produce a configure script.
+
+
+AC_REVISION(- rain 1.2.8r2)
+
+
+AC_INIT(include/rain_command_line.h)
+AC_CONFIG_HEADER(include/config.h)
+
+AC_PROG_INSTALL
+AC_PROG_MAKE_SET
+
+dnl Checks for compiler
+AC_PROG_CC
+
+dnl Sees if compiler takes -traditional
+AC_PROG_GCC_TRADITIONAL
+
+dnl Checks for OS type
+
+AC_CANONICAL_HOST
+
+case "$host" in
+  *-linux*)
+    AC_DEFINE(RAIN_LINUX)
+    ;;
+  *-openbsd*)
+    AC_DEFINE(RAIN_BSD)
+    ;;
+  *-netbsd*)
+    AC_DEFINE(RAIN_BSD)
+    ;;
+  *-freebsd*)
+    AC_DEFINE(RAIN_BSD)
+    ;;
+esac
+
+AC_TYPE_SIGNAL
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS(stdio.h stdlib.h)
+AC_CHECK_HEADERS(unistd.h errno.h string.h)
+AC_CHECK_HEADERS(sys/types.h fcntl.h sys/time.h)
+AC_CHECK_HEADERS(time.h sys/stat.h sys/socket.h netinet/in.h)
+AC_CHECK_HEADERS(arpa/inet.h netdb.h signal.h)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+
+dnl Checks to see wether or not setvbuf() arguments are reversed
+AC_FUNC_SETVBUF_REVERSED
+
+dnl Checks for library functions.
+AC_CHECK_FUNCS(ioctl fcntl)
+AC_CHECK_FUNCS(memset alarm usleep)
+AC_CHECK_FUNCS(gethostbyname getservbyport htons ntohs inet_ntoa inet_addr)
+AC_CHECK_FUNCS(socket setsockopt send sendto recv recvfrom)
+AC_CHECK_FUNCS(select pselect poll)
+AC_CHECK_FUNCS(printf strcpy strcmp strstr strerror)
+AC_CHECK_FUNCS(atoi atol)
+
+AC_OUTPUT(Makefile)

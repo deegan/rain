@@ -1,0 +1,98 @@
+/*--------------------------------------------------*
+ * $Header: /usr/src/Projects/rain/rain-1.2.7b3/include/config.h.in,v 1.1 2001/07/29 06:35:00 root Exp root $
+ * $Author: root $
+ * config.h
+ * rain - by Evil (mystic@tenebrous.com)
+ * A flexible packet flooder for testing stability.
+ * Copyright(c) 2001
+ * Licensed under the GNU General Public License
+ *
+ * $Log: config.h.in,v $
+ * Revision 1.1  2001/07/29 06:35:00  root
+ * Initial revision
+ *
+ *-------------------------------------------------*/
+#ifndef RAIN_CONFIG_H
+#define RAIN_CONFIG_H
+
+/*
+ * special macros to specify OS
+ */
+#undef RAIN_LINUX
+#undef RAIN_BSD
+
+
+/*
+ * datatype sizes 
+ */
+#undef SIZEOF_INT
+#undef SIZEOF_INT_P
+#undef SIZEOF_CHAR
+#undef SIZEOF_CHAR_P
+#undef SIZEOF_SHORT
+#undef SIZEOF_LONG
+#undef SIZEOF_UNSIGNED_LONG
+#undef SIZEOF_UNSIGNED_CHAR
+
+
+/*
+ * header files
+ */
+#undef HAVE_STDIO_H
+#undef HAVE_STDLIB_H
+#undef HAVE_UNISTD_H
+#undef HAVE_ERRNO_H
+#undef HAVE_STRING_H
+#undef HAVE_SIGNAL_H
+#undef HAVE_TIME_H
+#undef HAVE_SYS_TYPES_H
+#undef HAVE_FCNTL_H
+#undef HAVE_SYS_TIME_H
+#undef HAVE_SYS_STAT_H
+#undef HAVE_SYS_SOCKET_H
+#undef HAVE_NETINET_IN_H
+#undef HAVE_ARPA_INET_H
+#undef HAVE_NETDB_H
+#undef HAVE_NETDB_H
+
+
+/*
+ * library functions
+ */
+#undef HAVE_IOCTL
+#undef HAVE_FCNTL
+#undef HAVE_MEMSET
+#undef HAVE_ALARM
+#undef HAVE_USLEEP
+#undef HAVE_GETHOSTBYNAME
+#undef HAVE_GETSERVBYPORT
+#undef HAVE_HTONS
+#undef HAVE_NTOHS
+#undef HAVE_INET_NTOA
+#undef HAVE_INET_ADDR
+#undef HAVE_SOCKET
+#undef HAVE_SETSOCKOPT
+#undef HAVE_SEND
+#undef HAVE_SENDTO
+#undef HAVE_RECV
+#undef HAVE_RECVFROM
+#undef HAVE_PRINTF
+#undef HAVE_STRCPY
+#undef HAVE_STRCMP
+#undef HAVE_STRSTR
+#undef HAVE_STRERROR
+#undef HAVE_ATOI
+#undef HAVE_ATOL
+
+/*
+ * return type for signal handler
+ */
+#undef RETSIGTYPE
+
+/*
+ * setvbuf() arguments reversed?
+ */
+#undef SETVBUF_REVERSED
+
+
+#endif /* RAIN_CONFIG_H */
