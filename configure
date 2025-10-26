@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# From configure.in - rain 1.2.8r2
+# From configure.in - rain 1.3.0
 
 
 # Guess values for system-dependent variables and create Makefiles.
