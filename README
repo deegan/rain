@@ -1,5 +1,10 @@
 This is not my code originaly. I am merely trying to update it.
 
+rain-1.3.0
+First release that compiles on modern systems.
+
+Code base was rain-1.2.9beta1
+
 -------------------------------------------------------------
 
 rain is a packeting tool  used for testing system stability.
