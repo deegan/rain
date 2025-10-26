@@ -112,8 +112,7 @@ When modifying the code:
 
 ## Version Information
 
-Current version: 1.2.9beta1 (defined in Makefile.in:7)
-Last major version: 1.2.8r2 (from configure.in)
+Current version: 1.3.0 (defined in Makefile.in:7)
 
 Original author: Evil (mystic@tenebrous.com)
 License: GNU/GPL

@@ -1,6 +1,12 @@
 Changes Log:
 -----------
 
+1.3.0
+	- Fixed all compiler warnings for modern systems
+	- Changed u_char to char for string fields to fix signedness warnings
+	- Fixed misleading indentation in command line parsing
+	- Added __attribute__((unused)) for RCS ident variables
+
 1.2.9 BETA 1
 	- Added CYGWIN support
 	- Code cleanup and minor code changes
