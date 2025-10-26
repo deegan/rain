@@ -365,17 +365,17 @@ struct ipigmp {
 };
 
 
-/* 
- * global variables 
+/*
+ * global variables
  */
-u_int16_t packetsize;
-unsigned char      *buffer;   /* For holding packets. Declared globally to ensure it is freed when the program exits */
-time_t          send_start;   /* for storing start and finish time of total packets sent */
-time_t         send_finish;
-unsigned long packets_sent;
-u_short            verbose;
-struct in_addr       group;  /* for ICMP gateway and IGMP group addresses */
-int              sendflags;  /* stores flags for sendto(); Default is 0 */
+extern u_int16_t packetsize;
+extern unsigned char      *buffer;   /* For holding packets. Declared globally to ensure it is freed when the program exits */
+extern time_t          send_start;   /* for storing start and finish time of total packets sent */
+extern time_t         send_finish;
+extern unsigned long packets_sent;
+extern u_short            verbose;
+extern struct in_addr       group;  /* for ICMP gateway and IGMP group addresses */
+extern int              sendflags;  /* stores flags for sendto(); Default is 0 */
 /*---------------------------*/
 
 

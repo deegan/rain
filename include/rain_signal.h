@@ -20,7 +20,7 @@
 #define _RAIN_SIGNAL_H
 
 extern void signal_init(void);
-extern RETSIGTYPE catch_signal(int);
+extern void catch_signal(int);
 
 
 #endif /* _RAIN_SIGNAL_H */

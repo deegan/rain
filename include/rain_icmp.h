@@ -20,7 +20,7 @@
 
 
 
-unsigned char icmpinfo[56][56][56];
+extern unsigned char icmpinfo[56][56][56];
 
 
 /* 

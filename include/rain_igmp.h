@@ -18,7 +18,7 @@
 #ifndef _RAIN_IGMP_H
 #define _RAIN_IGMP_H
 
-unsigned char igmpinfo[56][56][5];
+extern unsigned char igmpinfo[56][56][5];
 
 
 extern void print_igmp_info(void);

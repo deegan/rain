@@ -18,9 +18,24 @@
 #include "rain_common.h"
 
 
+/*
+ * Global variable definitions
+ */
+u_int16_t packetsize;
+unsigned char *buffer;
+time_t send_start;
+time_t send_finish;
+unsigned long packets_sent;
+u_short verbose;
+struct in_addr group;
+int sendflags;
+unsigned char tcpinfo[25];
+unsigned char icmpinfo[56][56][56];
+unsigned char igmpinfo[56][56][5];
+
 
 /*
- * Internet checksum routine (RFC 1071) 
+ * Internet checksum routine (RFC 1071)
  */
 extern unsigned short
 in_cksum(const u_int16_t *addr, register int len, u_short csum)

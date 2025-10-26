@@ -158,7 +158,8 @@
     #define BYTE_FIX(x) htons(x)
     #define BYTE_UFIX(x) ntohs(x)
 
-  #else error "Unknown OS type (rain is currently only supported on Linux and *BSD)"
+  #else
+    #error "Unknown OS type (rain is currently only supported on Linux and *BSD)"
   #endif
 #endif /* BYTE_FIX */
 

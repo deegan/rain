@@ -46,12 +46,9 @@ signal_init(void) {
 /*
  * Main signal handling
  *
- * RETSIGTYPE is a macro defined
- * by ./configure which will be
- * set to either int or void, 
- * depending on the system.
+ * Modern systems require signal handlers to return void.
  */
-extern RETSIGTYPE 
+extern void
 catch_signal(int signo) {
   time_t total;
   float kbps = 0.0;
