@@ -22,16 +22,16 @@
  * Global variable definitions
  */
 u_int16_t packetsize;
-unsigned char *buffer;
+char *buffer;
 time_t send_start;
 time_t send_finish;
 unsigned long packets_sent;
 u_short verbose;
 struct in_addr group;
 int sendflags;
-unsigned char tcpinfo[25];
-unsigned char icmpinfo[56][56][56];
-unsigned char igmpinfo[56][56][5];
+char tcpinfo[25];
+char icmpinfo[56][56][56];
+char igmpinfo[56][56][5];
 
 
 /*

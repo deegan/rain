@@ -278,17 +278,17 @@ void parse_command_line(int argc, char **argv,
 
 /* TCP STREAM */
         else if(strcmp(argv[i], "--stream") == 0) {
-          if((pkt->type != DEFAULT) && (pkt->type != TCP) && (pkt->type != USERDEFAULT)) 
+          if((pkt->type != DEFAULT) && (pkt->type != TCP) && (pkt->type != USERDEFAULT))
             DieWithError("conflicting protocol types", R_CONFLICT);
-            if(pkttcp->beenset == 1) DieWithError("you cannot customize packets with --stream", 0);
+          if(pkttcp->beenset == 1) DieWithError("you cannot customize packets with --stream", 0);
           pkt->type = TCPSTREAM;
         }
 
 /* TCP CONNECT */
         else if(strcmp(argv[i], "--connect") == 0) {
-          if((pkt->type != DEFAULT) && (pkt->type != TCP) && (pkt->type != USERDEFAULT)) 
+          if((pkt->type != DEFAULT) && (pkt->type != TCP) && (pkt->type != USERDEFAULT))
             DieWithError("conflicting protocol types", R_CONFLICT);
-            if(pkttcp->beenset == 1) DieWithError("you cannot customize packets with --connect", 0);
+          if(pkttcp->beenset == 1) DieWithError("you cannot customize packets with --connect", 0);
           pkt->type = TCPCONNECT;
         }
 

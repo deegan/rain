@@ -20,7 +20,7 @@
 #ifndef _RAIN_TCP_H
 #define _RAIN_TCP_H
 
-extern unsigned char tcpinfo[25];
+extern char tcpinfo[25];
 
 extern void tcp_info_init(struct pkt_info_tcp *);
 extern int tcp_shower_connect(struct sockaddr_in *, struct pkt_info *);

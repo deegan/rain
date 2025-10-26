@@ -472,8 +472,8 @@ int main(int argc, char **argv)
 }
 
 
-/* 
- * Used for the RCS 'ident' program  - PLEASE DO NOT REMOVE OR ALTER 
+/*
+ * Used for the RCS 'ident' program  - PLEASE DO NOT REMOVE OR ALTER
  */
-static const char author[]    = {"$Creator: rain by Evil (mystic@tenebrous.com) $"};
-static const char copyright[] = {"$Copyright: (c) 2001 mystic@tenebrous.com $"};
+static const char author[]    __attribute__((unused)) = {"$Creator: rain by Evil (mystic@tenebrous.com) $"};
+static const char copyright[] __attribute__((unused)) = {"$Copyright: (c) 2001 mystic@tenebrous.com $"};
