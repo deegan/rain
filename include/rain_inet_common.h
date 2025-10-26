@@ -276,9 +276,9 @@ struct pkt_info {
   u_int16_t           sport;   /* source port */
   int               timeout;
   u_long              delay;   /* delay between packet sends */
-  u_char         saddr[256];   /* source address */
-  u_char         daddr[256];   /* destination address */
-  u_char         gaddr[256];   /* gateway address used in ICMP */
+  char           saddr[256];   /* source address */
+  char           daddr[256];   /* destination address */
+  char           gaddr[256];   /* gateway address used in ICMP */
   u_int16_t       type : 16;   /* TCP, SYN, UDP, ICMP or IGMP rev.1: TCPSTREAM, TCPCONNECT */
   u_int8_t          tos : 8;   /* type of service (IP header) */
   u_int8_t          ttl : 8;
@@ -290,7 +290,7 @@ struct pkt_info {
   u_int			 id;
   u_int           id_of : 1;
   u_short        randip : 1;
-  u_char      payload[1024];
+  char        payload[1024];
   u_short     rsport    : 1;  /* random source port specifier */
   u_short     rdport    : 1;  /* random dest port specifier */
   char               filler;
@@ -369,7 +369,7 @@ struct ipigmp {
  * global variables
  */
 extern u_int16_t packetsize;
-extern unsigned char      *buffer;   /* For holding packets. Declared globally to ensure it is freed when the program exits */
+extern char               *buffer;   /* For holding packets. Declared globally to ensure it is freed when the program exits */
 extern time_t          send_start;   /* for storing start and finish time of total packets sent */
 extern time_t         send_finish;
 extern unsigned long packets_sent;
